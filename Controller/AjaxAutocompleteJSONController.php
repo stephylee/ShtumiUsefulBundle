@@ -43,7 +43,7 @@ class AjaxAutocompleteJSONController extends Controller
 
         $property = $entity_inf['property'];
 
-        if ($entity_inf['case_insensitive']) {
+        if (isset($entity_inf['case_insensitive'])) {
             $where = 'WHERE LOWER(e.' . $property . ')';
             $where .= ' LIKE LOWER(:like)';
         } else {
@@ -52,7 +52,7 @@ class AjaxAutocompleteJSONController extends Controller
 
         }
 
-        if (!empty($entity_inf['where'])) {
+        if (isset($entity_inf['where'])) {
             $where .= ' AND e.' . $entity_inf['where'];
         }
 
