@@ -15,8 +15,6 @@ class DependentFilteredEntityController extends Controller
 
     public function getOptionsAction()
     {
-
-        $em = $this->get('doctrine')->getManager();
         $request = $this->getRequest();
         $translator = $this->get('translator');
 
@@ -27,7 +25,7 @@ class DependentFilteredEntityController extends Controller
         $entities = $this->get('service_container')->getParameter('shtumi.dependent_filtered_entities');
         $entity_inf = $entities[$entity_alias];
 
-        if (false === $this->get('security.context')->isGranted( $entity_inf['role'] )) {
+        if (false === $this->get('security.authorization_checker')->isGranted( $entity_inf['role'] )) {
             throw new AccessDeniedException();
         }
 
