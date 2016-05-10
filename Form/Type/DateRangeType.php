@@ -44,7 +44,7 @@ class DateRangeType extends AbstractType
         return 'field';
     }
 
-    public function getBlockPrefix()
+    public function getName()
     {
         return 'shtumi_daterange';
     }

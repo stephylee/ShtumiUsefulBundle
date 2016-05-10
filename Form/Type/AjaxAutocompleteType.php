@@ -29,7 +29,7 @@ class AjaxAutocompleteType extends AbstractType
         ));
     }
 
-    public function getBlockPrefix()
+    public function getName()
     {
         return 'shtumi_ajax_autocomplete';
     }
