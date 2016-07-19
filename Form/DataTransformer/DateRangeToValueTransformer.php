@@ -1,12 +1,12 @@
 <?php
 
-namespace Shtumi\UsefulBundle\Form\DataTransformer;
+namespace slad\UsefulBundle\Form\DataTransformer;
 
 use Symfony\Component\Form\DataTransformerInterface;
 use Symfony\Component\Form\Exception\UnexpectedTypeException;
 use Symfony\Component\Form\Exception\TransformationFailedException;
 
-use Shtumi\UsefulBundle\Model\DateRange;
+use Slad\UsefulBundle\Model\DateRange;
 
 class DateRangeToValueTransformer implements DataTransformerInterface
 {
