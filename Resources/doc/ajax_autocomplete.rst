@@ -1,9 +1,9 @@
-ShtumiUsefulBundle - make typical things easier
+SladUsefulBundle - make typical things easier
 
 Ajax autocomplete type
 ======================
 
-.. image:: https://github.com/shtumi/ShtumiUsefulBundle/raw/master/Resources/doc/images/ajax_autocomplete.png
+.. image:: https://github.com/stephylee/SladUsefulBundle/raw/master/Resources/doc/images/ajax_autocomplete.png
 
 
 Configuration
@@ -15,7 +15,7 @@ You should configure each autocomplete filter:
 
 ::
 
-    shtumi_useful:
+    slad_useful:
         autocomplete_entities:
             users:
                 class: AcmeDemoBundle:User
@@ -45,9 +45,9 @@ Simple usage
 ::
 
     $formBuilder
-        ->add('product', 'shtumi_ajax_autocomplete', array('entity_alias'=>'products'));
+        ->add('product', 'slad_ajax_autocomplete', array('entity_alias'=>'products'));
 
-If you use ``shtumi_ajax_autocomplete`` in your own bundle with your own twig templates, you should load
+If you use ``slad_ajax_autocomplete`` in your own bundle with your own twig templates, you should load
 `JQuery <http://jquery.com>`_.
 
 
@@ -63,7 +63,7 @@ Usage as SonataAdminBundle filter
     {
         $datagridMapper
             ->add('id')
-            ->add('user', 'shtumi_ajax_autocomplete', array('entity_alias'=>'users'))
+            ->add('user', 'slad_ajax_autocomplete', array('entity_alias'=>'users'))
         ;
     }
 
@@ -81,7 +81,7 @@ Useful when entity doesn't contain autocomplete field as ManyToOne
     {
         $datagridMapper
             ...
-            ->add('email', 'shtumi_ajax_autocomplete', array('entity_alias'=>'users',
+            ->add('email', 'slad_ajax_autocomplete', array('entity_alias'=>'users',
             'callback' =>
             function ($queryBuilder, $alias, $field, $data) {
                 if (!$data['value']) {
