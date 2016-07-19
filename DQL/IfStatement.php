@@ -1,6 +1,6 @@
 <?php
 
-namespace Shtumi\UsefulBundle\DQL;
+namespace Slad\UsefulBundle\DQL;
 
 use Doctrine\ORM\Query\AST\Functions\FunctionNode;
 use Doctrine\ORM\Query\Parser;
