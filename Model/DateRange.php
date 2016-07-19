@@ -1,6 +1,6 @@
 <?php
 
-namespace Shtumi\UsefulBundle\Model;
+namespace Slad\UsefulBundle\Model;
 
 class DateRange
 {
