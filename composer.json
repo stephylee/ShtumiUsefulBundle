@@ -1,7 +1,7 @@
 {
     "name": "slad/useful-bundle",
     "type": "symfony-bundle",
-    "description": "Symfony ShtumiUsefulBundle",
+    "description": "Symfony SladUsefulBundle",
     "keywords": ["Ajax Autocomplete form type", "Dependent filtered form type", "daterange", "shtumi"],
     "license": "MIT",
     "authors": [
@@ -18,7 +18,7 @@
         "sonata-project/doctrine-orm-admin-bundle": "master-dev"
     },
     "autoload": {
-        "psr-0": { "Shtumi\\UsefulBundle": "" }
+        "psr-0": { "Slad\\UsefulBundle": "" }
     },
     "target-dir": "Slad/UsefulBundle"
 }
