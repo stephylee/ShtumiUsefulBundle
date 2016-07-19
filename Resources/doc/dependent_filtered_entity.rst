@@ -1,9 +1,9 @@
-ShtumiUsefulBundle - make typical things easier
+SladUsefulBundle - make typical things easier
 
 Dependent filtered entity
 =========================
 
-.. image:: https://github.com/shtumi/ShtumiUsefulBundle/raw/master/Resources/doc/images/dependent_filtered_entity.png
+.. image:: https://github.com/stephylee/SladUsefulBundle/raw/master/Resources/doc/images/dependent_filtered_entity.png
 
 
 Configuration
@@ -17,7 +17,7 @@ You should configure relationship between master and dependent fields for each p
 
 ::
 
-    shtumi_useful :
+    slad_useful :
         dependent_filtered_entities:
             region_by_country:
                 class: AcmeDemoBundle:Region
@@ -53,7 +53,7 @@ Master and dependent fields should be in form together.
         ->add('country', 'entity', array('class'      => 'AcmeDemoBundle:Country'
                                        , 'required'   => true
                                        , 'empty_value'=> '== Choose country =='))
-        ->add('region', 'shtumi_dependent_filtered_entity'
+        ->add('region', 'slad_dependent_filtered_entity'
                     , array('entity_alias' => 'region_by_country'
                           , 'empty_value'=> '== Choose region =='
                           , 'parent_field'=>'country'))
@@ -71,7 +71,7 @@ You can configure multiple dependent filters:
 
 ::
 
-    shtumi_useful :
+    slad_useful :
         dependent_filtered_entities:
             region_by_country:
                 class: AcmeDemoBundle:Region
@@ -96,11 +96,11 @@ You can configure multiple dependent filters:
         ->add('country', 'entity', array('class'      => 'AcmeDemoBundle:Country'
                                        , 'required'   => true
                                        , 'empty_value'=> '== Choose country =='))
-        ->add('region', 'shtumi_dependent_filtered_entity'
+        ->add('region', 'slad_dependent_filtered_entity'
                     , array('entity_alias' => 'region_by_country'
                           , 'empty_value'=> '== Choose region =='
                           , 'parent_field'=>'country'))
-        ->add('town', 'shtumi_dependent_filtered_entity'
+        ->add('town', 'slad_dependent_filtered_entity'
                     , array('entity_alias' => 'town_by_region'
                           , 'empty_value'=> '== Choose town =='
                           , 'parent_field'=>'region'))
