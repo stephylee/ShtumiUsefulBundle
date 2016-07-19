@@ -1,8 +1,8 @@
 <?php
 
-namespace Shtumi\UsefulBundle\Form\Type;
+namespace Slad\UsefulBundle\Form\Type;
 
-use Shtumi\UsefulBundle\Form\DataTransformer\EntityToIdTransformer;
+use Slad\UsefulBundle\Form\DataTransformer\EntityToIdTransformer;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormInterface;
@@ -36,13 +36,13 @@ class DependentFilteredEntityType extends AbstractType
 
     public function getName()
     {
-        return 'shtumi_dependent_filtered_entity';
+        return 'slad_dependent_filtered_entity';
     }
 
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
 
-        $entities = $this->container->getParameter('shtumi.dependent_filtered_entities');
+        $entities = $this->container->getParameter('slad.dependent_filtered_entities');
         $options['class'] = $entities[$options['entity_alias']]['class'];
         $options['property'] = $entities[$options['entity_alias']]['property'];
 
