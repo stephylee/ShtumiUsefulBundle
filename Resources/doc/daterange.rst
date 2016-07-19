@@ -1,9 +1,9 @@
-ShtumiUsefulBundle - make typical things easier
+SladUsefulBundle - make typical things easier
 
 DateRange
 =========
 
-.. image:: https://github.com/shtumi/ShtumiUsefulBundle/raw/master/Resources/doc/images/daterange.png
+.. image:: https://github.com/stephylee/SladUsefulBundle/raw/master/Resources/doc/images/daterange.png
 
 Configuration
 -------------
@@ -14,7 +14,7 @@ You should add settings in config:
 
 ::
 
-    shtumi_useful:
+    slad_useful:
         date_range:
             date_format: d/m/Y
             default_interval: P30D
@@ -32,16 +32,16 @@ This form type operate with objects ``Shtumi\UsefulBundle\Model\DateRange``.
 
 There are three ways to create DateRange object:
 
-1. By using ``shtumi_daterange`` service
+1. By using ``slad_daterange`` service
 ****************************************
 
 ::
 
     // public function createToDate($dateEnd="now", $date_format = null, $date_interval=null)
 
-    $dateRange1 = $this->container->get('shtumi_daterange')->createToDate();
+    $dateRange1 = $this->container->get('slad_daterange')->createToDate();
 
-    $dateRange2 = $this->container->get('shtumi_daterange')->createToDate(new \DateTime('2012-01-11'), 'd/m/Y', 'P14D');
+    $dateRange2 = $this->container->get('slad_daterange')->createToDate(new \DateTime('2012-01-11'), 'd/m/Y', 'P14D');
 
 
 2. By creating new object
@@ -49,7 +49,7 @@ There are three ways to create DateRange object:
 
 ::
 
-    use Shtumi\UsefulBundle\Model\DateRange;
+    use Slad\UsefulBundle\Model\DateRange;
 
     ...
 
@@ -64,7 +64,7 @@ There are three ways to create DateRange object:
 
 ::
 
-    use Shtumi\UsefulBundle\Model\DateRange;
+    use Slad\UsefulBundle\Model\DateRange;
 
     ...
 
@@ -94,9 +94,9 @@ Form type
 ::
 
     $formBuilder
-        ->add('point1', "shtumi_daterange", array('required'=>false
+        ->add('point1', "slad_daterange", array('required'=>false
                                                 , 'default'=>$dateRange1))
 
 
-If you use ``shtumi_daterange`` in your own bundle with your own twig templates, you should load
+If you use ``slad_daterange`` in your own bundle with your own twig templates, you should load
 `JQuery <http://jquery.com>`_.
