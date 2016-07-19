@@ -27,21 +27,11 @@ You can use Ajax autocomplete form type as a filter type with [SonataAdminBundle
 
 ## Installation
 
-### Add the following lines to your  `deps` file and then run `php bin/vendors install`:
+### Add the following lines to your  `composer.json` file and then run `php app/console update`:
 
 ```
-[ShtumiUsefulBundle]
-    git=https://github.com/shtumi/ShtumiUsefulBundle.git
-    target=bundles/Shtumi/UsefulBundle
-```
+"slad/useful-bundle": "1.0"
 
-For Symfony 2.0 please use branch 2.0 of ShtumiUsefulBundle:
-
-```
-[ShtumiUsefulBundle]
-    git=https://github.com/shtumi/ShtumiUsefulBundle.git
-    target=bundles/Shtumi/UsefulBundle
-    version=origin/2.0
 ```
 
 You also should install [SonataAdminBundle](https://github.com/sonata-project/SonataAdminBundle) and all dependencies for it.
@@ -53,26 +43,19 @@ You also should install [SonataAdminBundle](https://github.com/sonata-project/So
     {
         return array(
             // ...
-            new Shtumi\UsefulBundle\ShtumiUsefulBundle(),
+            new Shtumi\UsefulBundle\SladUsefulBundle(),
             // ...
         );
     }
 ```
-### Register the ShtumiUsefulBundle namespace
-```
-    // app/autoload.php
-    $loader->registerNamespaces(array(
-        'Shtumi'            => __DIR__.'/../vendor/bundles',
-        // your other namespaces
-    ));
-```
+
 ### Import routes
 
 // app/config/routing.yml
 
 ```
-shtumi_useful:
-    resource: '@ShtumiUsefulBundle/Resources/config/routing.xml'
+slad_useful:
+    resource: '@SladUsefulBundle/Resources/config/routing.xml'
 ```
 
 ### Update your configuration
@@ -83,10 +66,10 @@ twig:
     ...
     form:
         resources:
-            - ShtumiUsefulBundle::fields.html.twig
+            - SladUsefulBundle::fields.html.twig
 ```
 
-Update your configuration in accordance with [using ShtumiUsefulBundle things](https://github.com/shtumi/ShtumiUsefulBundle/blob/master/Resources/doc/index.rst)
+Update your configuration in accordance with [using SladUsefulBundle things](https://github.com/stephylee/SladUsefulBundle/blob/master/Resources/doc/index.rst)
 
 ### Load jQuery to your views
 ```
