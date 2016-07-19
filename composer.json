@@ -1,5 +1,5 @@
 {
-    "name": "resomedia/useful-bundle",
+    "name": "slad/useful-bundle",
     "type": "symfony-bundle",
     "description": "Symfony ShtumiUsefulBundle",
     "keywords": ["Ajax Autocomplete form type", "Dependent filtered form type", "daterange", "shtumi"],
@@ -20,5 +20,5 @@
     "autoload": {
         "psr-0": { "Shtumi\\UsefulBundle": "" }
     },
-    "target-dir": "Shtumi/UsefulBundle"
+    "target-dir": "Slad/UsefulBundle"
 }
