@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Shtumi\UsefulBundle\Filter;
+namespace Slad\UsefulBundle\Filter;
 
 use Doctrine\ORM\Mapping\ClassMetadataInfo;
 use Sonata\AdminBundle\Form\Type\BooleanType;
@@ -39,7 +39,7 @@ class AjaxAutocompleteFilter extends Filter
             return;
         }
 
-        $entities = $this->container->getParameter('shtumi.autocomplete_entities');
+        $entities = $this->container->getParameter('slad.autocomplete_entities');
         $field = $entities[$this->getOption('entity_alias')]['property'];
 
         $this->handleScalar($queryBuilder, $alias, $field, $data);
@@ -107,7 +107,7 @@ class AjaxAutocompleteFilter extends Filter
         return array(
             'mapping_type' => ClassMetadataInfo::MANY_TO_ONE,
             'field_name'   => false,
-            'field_type'   => 'shtumi_ajax_autocomplete',
+            'field_type'   => 'slad_ajax_autocomplete',
             'field_options' => array(),
             'operator_type' => 'sonata_type_boolean',
             'operator_options' => array(),
