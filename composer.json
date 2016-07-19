@@ -18,7 +18,7 @@
         "sonata-project/doctrine-orm-admin-bundle": "master-dev"
     },
     "autoload": {
-        "psr-0": { "Slad\\UsefulBundle": "" }
+        "psr-0": { "Slad\\UsefulBundle": "1.0.x-dev" }
     },
     "target-dir": "Slad/UsefulBundle"
 }
