@@ -6,7 +6,7 @@
  * @author shtumi
  */
 
-namespace Shtumi\UsefulBundle\Form\Type;
+namespace Slad\UsefulBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -14,9 +14,9 @@ use Symfony\Component\Form\FormInterface;
 use Symfony\Component\Form\FormView;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\DataTransformer\ValueToStringTransformer;
-use Shtumi\UsefulBundle\Form\DataTransformer\DateRangeToValueTransformer;
+use Slad\UsefulBundle\Form\DataTransformer\DateRangeToValueTransformer;
 
-use Shtumi\UsefulBundle\Model\DateRange;
+use Slad\UsefulBundle\Model\DateRange;
 
 class DateRangeType extends AbstractType
 {
@@ -46,7 +46,7 @@ class DateRangeType extends AbstractType
 
     public function getName()
     {
-        return 'shtumi_daterange';
+        return 'slad_daterange';
     }
 
     public function buildForm(FormBuilderInterface $builder, array $options)
