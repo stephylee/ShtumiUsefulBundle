@@ -1,6 +1,6 @@
 <?php
 
-namespace Shtumi\UsefulBundle\Controller;
+namespace Slad\UsefulBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -22,7 +22,7 @@ class DependentFilteredEntityController extends Controller
         $parent_id    = $request->get('parent_id');
         $empty_value  = $request->get('empty_value');
 
-        $entities = $this->get('service_container')->getParameter('shtumi.dependent_filtered_entities');
+        $entities = $this->get('service_container')->getParameter('slad.dependent_filtered_entities');
         $entity_inf = $entities[$entity_alias];
 
         if (false === $this->get('security.authorization_checker')->isGranted( $entity_inf['role'] )) {
