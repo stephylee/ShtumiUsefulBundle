@@ -1,6 +1,6 @@
 <?php
 
-namespace Shtumi\UsefulBundle\Form\DataTransformer;
+namespace Slad\UsefulBundle\Form\DataTransformer;
 
 use Symfony\Component\Form\DataTransformerInterface;
 use Doctrine\ORM\EntityManager;
