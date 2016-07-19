@@ -1,6 +1,6 @@
 <?php
 
-namespace Shtumi\UsefulBundle\DependencyInjection;
+namespace Slad\UsefulBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('shtumi_useful');
+        $rootNode = $treeBuilder->root('slad_useful');
 
         $rootNode
 
