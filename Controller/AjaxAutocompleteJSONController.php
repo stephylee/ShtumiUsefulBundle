@@ -1,6 +1,6 @@
 <?php
 
-namespace Shtumi\UsefulBundle\Controller;
+namespace Slad\UsefulBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -17,7 +17,7 @@ class AjaxAutocompleteJSONController extends Controller
     {
         $em = $this->get('doctrine')->getManager();
 
-        $entities = $this->get('service_container')->getParameter('shtumi.autocomplete_entities');
+        $entities = $this->get('service_container')->getParameter('slad.autocomplete_entities');
 
         $entity_alias = $request->get('entity_alias');
         $entity_inf = $entities[$entity_alias];
