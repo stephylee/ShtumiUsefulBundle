@@ -1,4 +1,4 @@
-ShtumiUsefulBundle - make typical things easier
+SladUsefulBundle - make typical things easier
 
 DQL functions
 =============
@@ -6,7 +6,7 @@ DQL functions
 Configuration
 -------------
 
-To use provided by ShtumiUsefulBundle DQL functions you should configure your doctrine:
+To use provided by SladUsefulBundle DQL functions you should configure your doctrine:
 
 // app/config/config.yml
 
@@ -19,11 +19,11 @@ To use provided by ShtumiUsefulBundle DQL functions you should configure your do
                 default:
                     dql:
                         datetime_functions:
-                            datediff: Shtumi\UsefulBundle\DQL\DateDiff
+                            datediff: Slad\UsefulBundle\DQL\DateDiff
                         numeric_functions:
-                            if: Shtumi\UsefulBundle\DQL\IfStatement
-                            ifnull: Shtumi\UsefulBundle\DQL\IfNull
-                            round: Shtumi\UsefulBundle\DQL\Round
+                            if: Slad\UsefulBundle\DQL\IfStatement
+                            ifnull: Slad\UsefulBundle\DQL\IfNull
+                            round: Slad\UsefulBundle\DQL\Round
 
 
 Usage
