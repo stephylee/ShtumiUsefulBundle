@@ -2,7 +2,7 @@
     "name": "slad/useful-bundle",
     "type": "symfony-bundle",
     "description": "Symfony SladUsefulBundle",
-    "keywords": ["Ajax Autocomplete form type", "Dependent filtered form type", "daterange", "shtumi"],
+    "keywords": ["Ajax Autocomplete form type", "Dependent filtered form type", "daterange"],
     "license": "MIT",
     "authors": [
         {
