@@ -1,6 +1,6 @@
 <?php
 
-namespace Shtumi\UsefulBundle\Tests\Controller;
+namespace Slad\UsefulBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
