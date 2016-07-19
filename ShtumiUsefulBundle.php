@@ -1,9 +1,9 @@
 <?php
 
-namespace Shtumi\UsefulBundle;
+namespace Slad\UsefulBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class ShtumiUsefulBundle extends Bundle
+class SladUsefulBundle extends Bundle
 {
 }
