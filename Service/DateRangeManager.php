@@ -1,8 +1,8 @@
 <?php
 
-namespace Shtumi\UsefulBundle\Service;
+namespace Slad\UsefulBundle\Service;
 
-use Shtumi\UsefulBundle\Model\DateRange;
+use Slad\UsefulBundle\Model\DateRange;
 
 class DateRangeManager
 {
