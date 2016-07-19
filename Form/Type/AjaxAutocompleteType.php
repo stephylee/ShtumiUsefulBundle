@@ -1,13 +1,13 @@
 <?php
 
-namespace Shtumi\UsefulBundle\Form\Type;
+namespace Slad\UsefulBundle\Form\Type;
 
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\Form\FormView;
 use Symfony\Component\Form\Exception\FormException;
-use Shtumi\UsefulBundle\Form\DataTransformer\EntityToPropertyTransformer;
+use Slad\UsefulBundle\Form\DataTransformer\EntityToPropertyTransformer;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -31,7 +31,7 @@ class AjaxAutocompleteType extends AbstractType
 
     public function getName()
     {
-        return 'shtumi_ajax_autocomplete';
+        return 'slad_ajax_autocomplete';
     }
 
     public function getParent()
@@ -41,7 +41,7 @@ class AjaxAutocompleteType extends AbstractType
 
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $entities = $this->container->getParameter('shtumi.autocomplete_entities');
+        $entities = $this->container->getParameter('slad.autocomplete_entities');
 
   
         $options['class'] = $entities[$options['entity_alias']]['class'];
