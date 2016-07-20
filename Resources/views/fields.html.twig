@@ -102,6 +102,12 @@
                     jQuery('html').html(xhr.responseText);
                     }
                 });
+                /*
+                * to avoid a double select to be displayed
+                */
+                $(document).ajaxSuccess(function (event, xhr, settings) {
+                    Admin.setup_select2();
+                });   
             });
             jQuery("select#{{ form.parent.offsetGet( parent_field ).vars.id }}").trigger('change');
         });
